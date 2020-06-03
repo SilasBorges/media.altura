@@ -1,0 +1,41 @@
+package media;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		int posicao;
+		
+		System.out.println("Informe a quantidade de pessoas intrevistadas:");
+		posicao = sc.nextInt();
+		
+		double[] vet = new double [posicao];
+		
+		for(int i = 0; i < posicao; i++) {
+			
+			System.out.println("Informe a altura da pessoa intrevistada:");
+			vet[i] = sc.nextDouble();
+			
+		}
+		
+		double soma = 0.0;
+		
+		for(int i = 0; i<posicao; i++) {
+			
+			soma += vet[i];
+			
+		}
+		
+		double media = soma / posicao;
+		
+		System.out.printf("A media da altura das pessoas entrevistas é %.2f%n", media);
+		
+	}
+
+}
